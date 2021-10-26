@@ -1,0 +1,29 @@
+﻿@model EAVM
+@{
+    ViewBag.Title = "AddEntityAttribute";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="panel panel-primary">
+        <div class="panel panel-body">
+            <div>
+                @Html.TextBoxFor(x => x.EntityAttribute.Title)
+            </div>
+
+            <div>
+                @Html.TextBoxFor(x => x.EntityAttribute.Description)
+            </div>
+
+            <div>
+                <button class="btn btn-primary">
+                    Ekle
+                </button>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+

@@ -1,0 +1,38 @@
+﻿@model PAVM
+@{
+    ViewBag.Title = "ProductDetail";
+}
+
+
+
+@using (Html.BeginForm())
+{ 
+    @Html.HiddenFor(x=>x.Product.ID)
+
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>@Model.Product.ProductName özellikleri</th>
+                <th>@Model.Product.ProductName özellik degeri</th>
+            </tr>
+
+
+        </thead>
+
+        <tbody>
+            @foreach (ProductAttribute item in Model.Product.ProductAttributes)
+            {
+                <tr>
+                    <td> @item.Attribute.Title</td>
+                    <td>@Html.TextBox("valueName",null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>        if (Model.Product.ProductAttributes.Count != 0)
+                {
+                    <button class="btn btn-primary"> Ozellikleri kaydet</button>
+                }
+
+}
+

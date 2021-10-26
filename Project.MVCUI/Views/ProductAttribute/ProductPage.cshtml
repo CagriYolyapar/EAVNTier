@@ -1,0 +1,24 @@
+﻿@model PAVM
+@{
+    ViewBag.Title = "ProductPage";
+}
+
+<table>
+    <tr>
+        <th>Ozellik ismi</th>
+        <th>Ozellik Degeri</th>
+    </tr>
+
+    @foreach (ProductAttribute item in Model.ProductAttributes)
+    {
+        <tr>
+            <td>
+                @item.Attribute.Title
+            </td>
+            <td>
+                @item.Value
+            </td>
+        </tr>
+    }
+</table>
+

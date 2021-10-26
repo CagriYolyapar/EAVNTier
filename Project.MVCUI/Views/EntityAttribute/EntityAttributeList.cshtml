@@ -1,0 +1,31 @@
+﻿@model EAVM
+@{
+    ViewBag.Title = "EntityAttributeList";
+}
+
+
+
+
+<div>
+    Yeni ürün eklemek icin @Html.ActionLink("tıklayınız", "AddEntityAttribute")
+</div>
+
+
+<table>
+    <tr>
+        <th>Urun Ismi</th>
+        <th>Urun Fiyatı</th>
+    </tr>
+
+    @foreach (EntityAttribute item in Model.EntityAttributes)
+    {
+        <tr>
+            <td>
+                @item.Title
+            </td>
+            <td>
+                @item.Description
+            </td>
+        </tr>
+    }
+</table>
